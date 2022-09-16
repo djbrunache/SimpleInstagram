@@ -6,6 +6,12 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE"/>
+        </intent>
+    </queries>
+
     <application
         android:name=".ParseApplication"
         android:allowBackup="true"
@@ -17,25 +23,38 @@
         
         <provider
             android:name="androidx.core.content.FileProvider"
-            android:authorities="com.codepath.fileprovider"
+            android:authorities="com.example.fileprovider"
             android:exported="false"
             android:grantUriPermissions="true" >
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/fileprovider" />
         </provider>
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/>
+
         <activity
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
-        </activity>
+
+        <meta-data
+            android:name="com.parse.SERVER_URL"
+            android:value="https://parseapi.back4app.com"/>
+        <meta-data
+            android:name="com.parse.APPLICATION_ID"
+            android:value="4M00Fa4Co6htjEegEgLUhGN5rapN8eQxlQJJ9xmE"/>
+        <meta-data
+            android:name="com.parse.CLIENT_KEY"
+            android:value="quiZraaHzbPS053d9F9h2vNiKEK60mTk5DI4o9rL"/>
     </application>
 
 </manifest>

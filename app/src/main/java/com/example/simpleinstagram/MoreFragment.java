@@ -135,16 +135,16 @@ public class MoreFragment extends Fragment {
     }
     private void savePost(String description, ParseUser currentUser, File photoFile) {
         progressLoading.setVisibility(ProgressBar.VISIBLE);
-        Post post=new Post();
+        Post post = new Post();
         post.setDescription(description);
         post.setImage(new ParseFile(photoFile));
         post.setUser(currentUser);
         post.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
-                if(e !=null){
-                    Log.e(TAG,"Error while saving !",e);
-                    Toast.makeText(getContext(),"Error while saving",Toast.LENGTH_SHORT).show();
+                if(e != null){
+                    Log.e(TAG,"Error while saving !", e);
+                    Toast.makeText(getContext(),"Error while saving", Toast.LENGTH_SHORT).show();
                     Log.i(TAG,"Post save was successful!");
                     etDescription.setText("");
                     ivPostImage.setImageResource(0);
