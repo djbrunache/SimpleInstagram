@@ -9,6 +9,15 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageButton
+            android:id="@+id/iconBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_back" />
+
+
         <TextView
             android:id="@+id/tvName1"
             android:layout_width="match_parent"
@@ -19,6 +28,17 @@
             android:text="Instagram"
             android:textColor="@color/black"
             android:textSize="26sp" />
+
+        <ImageButton
+            android:id="@+id/ibImage1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_send"
+            tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
 
     </RelativeLayout>
 

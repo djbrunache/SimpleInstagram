@@ -3,24 +3,35 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1915" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/heart_change.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_acount.xml" value="0.1915" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_acount_outline.xml" value="0.1915" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_back.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_baseline_more.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_bookmark.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_camera.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_chat.xml" value="0.1915" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_comment_outline.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_heart.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_home.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_home_outline.xml" value="0.1915" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_plus_box.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_plus_box_outline.xml" value="0.1915" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/drawable/ic_send.xml" value="0.1915" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/activity_comment.xml" value="0.1" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/activity_detail.xml" value="0.25" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/activity_login.xml" value="0.203125" />
-        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/activity_main.xml" value="0.203125" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/fragment_home.xml" value="0.203125" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/fragment_more.xml" value="0.203125" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/fragment_profile.xml" value="0.203125" />
-        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/item_post.xml" value="0.203125" />
-        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/toolbar_main.xml" value="0.203125" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/grid_item.xml" value="0.16485507246376813" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/item_comment.xml" value="0.6632653061224489" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/item_post.xml" value="0.18" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/toolbar_detail.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/layout/toolbar_main.xml" value="0.15" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/menu/bottom_menu.xml" value="0.203125" />
         <entry key="..\:/Users/Daril/AndroidStudioProjects/SimpleInstagram/app/src/main/res/xml/fileprovider.xml" value="0.203125" />
       </map>

@@ -7,58 +7,71 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <include
+        android:id="@+id/toolBar"
+        layout="@layout/toolbar_detail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white" />
+
+
     <ProgressBar
         android:id="@+id/pLoading"
-        style="?android:attr/progressBarStyle"
+        style="@style/Widget.AppCompat.ProgressBar"
         android:layout_width="229dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="62dp"
         android:visibility="invisible" />
-
 
     <EditText
         android:id="@+id/etDescription"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/pLoading"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="49dp"
+        android:autofillHints="Description"
         android:ems="10"
         android:hint="@string/description"
         android:inputType="textPersonName"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck"
-        android:autofillHints="Description" />
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <ImageView
         android:id="@+id/ivPostImage"
         android:layout_width="match_parent"
         android:layout_height="159dp"
         android:layout_below="@+id/etDescription"
+        android:layout_marginTop="64dp"
         android:contentDescription="@string/description"
-        android:layout_marginTop="19dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <Button
         android:id="@+id/btnCaptureImage"
-        android:layout_width="161dp"
-        android:layout_height="wrap_content"
+        android:layout_width="148dp"
+        android:layout_height="54dp"
         android:layout_below="@id/ivPostImage"
-        android:layout_marginTop="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="160dp"
         android:backgroundTint="#BEC2CB"
+        android:paddingStart="50dp"
         tools:ignore="SpeakableTextPresentCheck"
         toolsText:icon="@drawable/ic_camera"
         toolsText:iconTint="#090909" />
 
     <Button
         android:id="@+id/btnSubmit"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
+        android:layout_width="147dp"
+        android:layout_height="54dp"
+        android:layout_below="@+id/ivPostImage"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="101dp"
-        android:layout_marginBottom="262dp"
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="95dp"
+        android:layout_marginBottom="160dp"
         android:layout_toEndOf="@+id/btnCaptureImage"
         android:backgroundTint="#BEC2CB"
+        android:paddingStart="65dp"
         tools:ignore="SpeakableTextPresentCheck"
         toolsText:icon="@drawable/ic_send"
         toolsText:iconTint="#090909" />

@@ -4,24 +4,92 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/container1">
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@id/container"
+        tools:ignore="RelativeOverlap">
+        <ImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <TextView
+            android:id="@+id/tvUsername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@+id/ivProfileImage"
+            tools:ignore="RelativeOverlap"
+            android:textStyle="bold"
+            tools:text="daril@3590" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:id="@+id/btnSettings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-5dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_baseline_more" />
+
+    <ImageButton
+        android:id="@+id/btnHeart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivImageP1"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_heart" />
+
+    <ImageButton
+        android:id="@+id/btnComment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivImageP1"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/btnHeart"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_chat" />
+
+    <ImageButton
+        android:id="@+id/imgBtnSend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivImageP1"
+        android:layout_marginTop="5dp"
+        android:layout_toEndOf="@+id/btnComment"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_send" />
+
+    <ImageButton
+        android:id="@+id/imgBtnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivImageP1"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="10dp"
+        android:backgroundTint="@color/white"
+        android:src="@drawable/ic_bookmark" />
 
     <TextView
-        android:id="@+id/tvName2"
-        android:layout_width="138dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="50dp"
-        android:text="Prospere"
-        android:textSize="15dp" />
-
-
-    <EditText
         android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        android:layout_below="@id/heart"
+        android:layout_below="@id/btnComment"
         android:layout_marginStart="60dp"
         android:layout_marginTop="15dp"
         android:ems="10"
@@ -35,62 +103,37 @@
         android:layout_height="181dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="14dp"
+        android:layout_below="@+id/container"
         android:layout_weight='1'
         android:gravity="center_horizontal|center_vertical"
         android:scaleType="centerCrop"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/ic_more"
-        android:layout_width="34dp"
+        android:id="@+id/tvLike"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="120dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="60dp"
-        android:layout_toEndOf="@id/tvName2"
-        android:drawableLeft="@drawable/ic_baseline_more" />
+        android:layout_below="@+id/description"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="5dp"
+        tools:text="21 likes" />
 
-    <ImageView
-        android:id="@+id/heart"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_below="@id/ivImageP1"
-        android:layout_marginStart="60dp"
-        app:srcCompat="@drawable/ic_heart" />
-
-    <ImageView
-        android:id="@+id/chat"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvLike"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="200dp"
-        android:layout_toEndOf="@id/heart"
-        app:srcCompat="@drawable/ic_chat" />
+        android:layout_marginTop="5dp"
+        tools:ignore="RelativeOverlap"
+        tools:text="10/23/1" />
 
-    <ImageView
-        android:id="@+id/send"
-        android:layout_width="30dp"
+    <Space
+        android:layout_width="match_parent"
         android:layout_height="30dp"
-        android:layout_marginStart="-200dp"
-        android:layout_marginTop="260dp"
-        android:layout_toEndOf="@id/chat"
-        app:srcCompat="@drawable/ic_send" />
-
-
-    <ImageView
-        android:id="@+id/bookmark"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="-10dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginEnd="50dp"
-        android:layout_toEndOf="@id/send"
-        app:srcCompat="@drawable/ic_bookmark" />
+        android:layout_below="@+id/description" />
 
 </RelativeLayout>

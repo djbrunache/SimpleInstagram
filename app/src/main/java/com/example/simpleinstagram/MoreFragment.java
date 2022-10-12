@@ -67,11 +67,10 @@ public class MoreFragment extends Fragment {
             @Override
             public void onClick(View view1) {
                 launchCamera();
-
+                Toast.makeText(getContext(), "Take", Toast.LENGTH_SHORT).show();
             }
         });
 
-        queryPosts();
         btnSubmit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -80,10 +79,6 @@ public class MoreFragment extends Fragment {
                     Toast.makeText(getContext(),"Description cannot be empty",Toast.LENGTH_SHORT).show();
                     return;
 
-                }
-                if(photoFile==null || ivPostImage.getDrawable()==null){
-                    Toast.makeText(getContext(),"There is no image",Toast.LENGTH_SHORT).show();
-                    return;
                 }
                 ParseUser currentUser=ParseUser.getCurrentUser();
                 savePost(description,currentUser,photoFile);
@@ -125,7 +120,10 @@ public class MoreFragment extends Fragment {
                 Bitmap takenImage = BitmapFactory.decodeFile(photoFile.getAbsolutePath());
 
                 // Load the selected image into a preview
-
+                btnSubmit.setVisibility(View.VISIBLE);
+                btnCaptureImage.setVisibility(View.INVISIBLE);
+                etDescription.setVisibility(View.VISIBLE);
+                ivPostImage.setVisibility(View.VISIBLE);
                 ivPostImage.setImageBitmap(takenImage);
             } else {
                 Toast.makeText(getContext(), "Picture wasn't taken", Toast.LENGTH_SHORT).show();
@@ -145,33 +143,26 @@ public class MoreFragment extends Fragment {
                 if(e != null){
                     Log.e(TAG,"Error while saving !", e);
                     Toast.makeText(getContext(),"Error while saving", Toast.LENGTH_SHORT).show();
-                    Log.i(TAG,"Post save was successful!");
-                    etDescription.setText("");
-                    ivPostImage.setImageResource(0);
                     progressLoading.setVisibility(ProgressBar.INVISIBLE);
-                }
-
-            }
-        });
-    }
-
-    private void queryPosts() {
-        ParseQuery<Post> query = ParseQuery.getQuery(Post.class);
-        query.include(Post.KEY_USER);
-        query.findInBackground(new FindCallback<Post>() {
-            @Override
-            public void done(List<Post> posts, ParseException e) {
-                if(e !=null){
-                    Log.e(TAG,"Issues with getting posts",e);
                     return;
                 }
-                for(Post post:posts){
-                    Log.i(TAG,"Post: " + post.getDescription() + " username: "+ post.getUser().getUsername());
-
+                if (photoFile == null || ivPostImage.getDrawable() == null) {
+                    Toast.makeText(getContext(), "No image", Toast.LENGTH_SHORT).show();
+                    progressLoading.setVisibility(ProgressBar.INVISIBLE);
+                    return;
                 }
+                Log.i(TAG,"Post save was successful!");
+                etDescription.setText("");
+                ivPostImage.setImageResource(0);
+                progressLoading.setVisibility(ProgressBar.INVISIBLE);
+                btnSubmit.setVisibility(View.INVISIBLE);
+                btnCaptureImage.setVisibility(View.VISIBLE);
+                etDescription.setVisibility(View.INVISIBLE);
+                ivPostImage.setVisibility(View.INVISIBLE);
             }
         });
     }
+
     public File getPhotoFileUri(String fileName) {
         // Get safe storage directory for photos
         // Use `getExternalFilesDir` on Context to access package-specific directories.
